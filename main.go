@@ -9,12 +9,6 @@ import (
 
 func main() {
 	common.InitDB()
-
-	// if err != nil {
-	// 	panic("连接数据库失败")
-	// }
-	//defer db.Close()
-
 	r := gin.Default()
 	r = routers.CollectRouter(r)
 	r.LoadHTMLGlob("templates/*")
